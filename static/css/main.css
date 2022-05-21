@@ -1,0 +1,15 @@
+.carousel-item{
+height:800px;
+min-height:300px;
+}
+        
+        #about_card1{
+        background-color: #4cb4c7;
+        }
+        #about_card2{
+        background-color: #7abecc;
+        }
+        #about_card3{
+        background-color: #7CD1C0;
+
+        }

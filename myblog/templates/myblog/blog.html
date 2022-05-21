@@ -1,0 +1,29 @@
+{% extends 'myblog/main.html'%}
+{% block body %}
+<br>
+<div class="row">
+    <h5>Recent posts</h5>
+    <hr>
+    <div class="container px-7 py-9" id="blogs">
+        <div class="row">
+             {% for blg in blogs reversed %}
+          <div class="col-md  d-flex justify-conent-center">
+             <div class="container ">
+                <div class="card" style="width: 18rem;">
+                  <img src="{{blg.image.url}}" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <!--     <img src={{tech.img}} >-->
+                     <h5 class="card-title">{{blg.title}}</h5>
+                     <h9 >{{blg.created_date}}</h9>
+                     <p class="card-text">{{blg.content|truncatewords:15}}</p>
+                     <a href="{% url 'viewpage' blg.id %}" class="btn btn-primary">Read More</a>
+                   </div>
+                </div>
+             </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
+{% endblock body %}

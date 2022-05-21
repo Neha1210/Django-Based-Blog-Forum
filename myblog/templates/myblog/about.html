@@ -1,0 +1,68 @@
+{% extends 'myblog/main.html'%}
+
+{% block body %}
+<br>
+<div class="row">
+	<div class="col col-md-4">
+		<div class="card text-center" id="about_card1">
+			<div class="card-header">
+				<h5 class="card-title">Total posts</h5>
+			</div>
+			<div class="card-body">
+				<h5 class="card-subtitle">{{total_blogs}}</h5>
+			</div>
+		</div>
+	</div>
+    <div class="col col-md-4">
+		<div class="card text-center" id="about_card2">
+			<div class="card-header">
+				<h5 class="card-title">Autho'rs Blogs</h5>
+			</div>
+			<div class="card-body">
+				<h5 class="card-subtitle">{{authors_blogs}}</h5>
+			</div>
+		</div>
+	</div>
+	<div class="col col-md-4">
+		<div class="card text-center" id="about_card3">
+			<div class="card-header">
+				<h5 class="card-title">"My_Story" posts</h5>
+			</div>
+			<div class="card-body">
+				<h5 class="card-subtitle">{{mystory_blogs}}</h5>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br>
+<div class="row just">
+	<h1>About Author</h1>
+	<hr>
+	<div class="card mx-auto mb-3" style="max-width: 990px;" id="profile">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/static/images/profile.jpg" class="img-fluid rounded-start" alt="Profile Image">
+    </div>
+    <div class="col-md-8">
+      <div style="max-width:600px;" class="card-body">
+        <h5 style="font-family: ;font-size:30px ;" class="card-title">Bl@kSh@d0w</h5>
+        <p class="card-text">Helllo readers,</p>
+        <p style="padding-left: 20px;">This is Your author Bl@cksh@dow.I am Undergraduate student currently pursuing engineering 3rd year from pune.I have Started this blog to better understand ADHD fellows out there.so that we can share each other's experience try to coincide with it.I hope we will get along well and help each other to grow along well.</p>
+        <p >Thank You</p>
+        <p style="padding-left">Contact me here,</p>
+        <span>
+        	<a href="https://www.instagram.com/"><img id="social_media" src="/static/images/instagram.png" alt="instagram"></a>
+        	<a href="https://www.facebook.com/login.php"><img id="social_media" src="/static/images/facebook.png" alt="facebook"></a>
+        	<a href="https://twitter.com/i/flow/login"><img id="social_media" src="/static/images/twitter.png" alt="twitter"></a>
+        	<a href="gmail sign in"><img id="social_media" src="/static/images/gmail.png" alt="gmail"></a>
+        </span>
+        <br>
+        <br>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock body %}

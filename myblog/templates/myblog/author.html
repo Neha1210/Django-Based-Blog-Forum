@@ -1,0 +1,46 @@
+{% extends 'myblog/main.html'%}
+
+{% block body %}
+{% include 'myblog/carousel2.html' %}
+<br>
+<div class="row">
+	<div class="card">
+		<div class="card-body">
+			<ul>
+				<li><a style="color:#ad1457;font-weight:bold;font-size:20px ;" class="btn" href="{% url 'createblog'%}">Create Post</a></li>
+			</ul>
+			<br>
+<div class="row">
+    <h5 style="color:#ff6f00; font-weight: bold;font-size: 30px;">My posts</h5>
+    <div class="card ">
+        <div class="row">
+             {% for blg in blogs reversed %}
+          <div class="col-md  d-flex justify-conent-center">
+             <div class="container ">
+                <div class="card " style="width: 18rem; margin: 20px;">
+                  <img src="{{blg.image.url}}" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <!--     <img src={{tech.img}} >-->
+                     <h5 class="card-title">{{blg.title}}</h5>
+                     <h9 >{{blg.created_date}}</h9>
+                     <p class="card-text">{{blg.content|truncatewords:15}}</p>
+                     <span>
+                     	<a href="{% url 'viewpage' blg.id%}" class="btn btn-primary">Read More</a>
+                     	<a href="{% url 'updateblog' blg.id %}" class="btn btn-success">update</a>
+                     	<a href="{% url 'deleteblog' blg.id%}" class="btn btn-danger">Remove</a>
+                     </span>
+                   </div>
+                </div>
+             </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
+			</div>
+		
+	</div>
+	
+</div>
+{% endblock body %}

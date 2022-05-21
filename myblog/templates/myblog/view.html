@@ -1,0 +1,27 @@
+{% extends 'myblog/main.html'%}
+{% block body %}
+<br>
+
+<div class="row">
+    <div class="col col-md ">
+        <div class="container">
+            <div class="card">
+                <img src="" >
+                <div class="card-body">
+               <h1 class="card-title text-center"> {{blogs.title}}</h1>
+                <br>
+               <h5 class="card-subtitle ">{{blogs.created_date}},</h5>
+                
+                <div class="text-center">
+                <img style="height:500px;width:700px; " class="card-img-top" src="{{blogs.image.url}}" alt="thumbnail" > 
+            </div>
+                <br>
+                '<pre><p style="font-family:Times New Roman;font-size: 20px;" class="card-text" >
+                    {{blogs.content}}</p></pre>'
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body%}
