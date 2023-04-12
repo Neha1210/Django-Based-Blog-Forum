@@ -5,7 +5,6 @@ from django.contrib import messages
 
 from .models import *
 from .forms import*
-
 # Create your views here.
 def register(request):
 

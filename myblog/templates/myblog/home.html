@@ -15,10 +15,10 @@
                 <div class="card bg-#f50057 mb-3" style="width: 18rem;">
                      <img src="{{blg.image.url}}" class="card-img-top" alt="thumbnail">
                    <div class="card-body">
-                     <h5 class="card-title">{{blg.title}}</h5>
+                     <a style="text-decoration:none; color:black; font-size:21px; font-weight:5px; "
+               href="{% url 'viewpage' blg.id%}" class="card-title">{{blg.title}}</a>
                      <h9 >{{blg.created_date}}</h9>
                      <p class="card-text">{{blg.content|truncatewords:15}}</p>
-                     <a href="{% url 'viewpage' blg.id%}" class="btn btn-primary">Read More</a>
                    </div>
                 </div>
              </div>
@@ -31,7 +31,7 @@
   <div class="col-md-5">
     <div class="card border-dark  text-center ">
       <br>
-      <h5 style="color:#00bfa5">Popular post</h5>
+      <h5 style="color:#00bfa5; font-weight:bold; margin-top:35px">Popular post</h5>
       
       {% for blg in blogs reversed%}
         <div class="card mb-3" style="max-width: 490px;margin-left: 50px;margin-top: 20px;">
@@ -41,7 +41,8 @@
             </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">{{blg.title}}</h5>
+            <a style="text-decoration:none; color:black; font-size:21px; font-weight:5px;"
+               href="{% url 'viewpage' blg.id%}" class="card-title">{{blg.title}}</a>
             <p class="card-text">{{blg.content|truncatewords:15}}</p>
             <p class="card-text"><small class="text-muted">{{blg.created_date}}</small></p>
           </div>

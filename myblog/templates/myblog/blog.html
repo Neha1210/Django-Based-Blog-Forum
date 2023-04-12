@@ -13,10 +13,10 @@
                   <img src="{{blg.image.url}}" class="card-img-top" alt="...">
                    <div class="card-body">
                      <!--     <img src={{tech.img}} >-->
-                     <h5 class="card-title">{{blg.title}}</h5>
+                     <a style="text-decoration:none; color:black; font-size:21px; font-weight:5px; "
+               href="{% url 'viewpage' blg.id%}" class="card-title">{{blg.title}}</a>
                      <h9 >{{blg.created_date}}</h9>
                      <p class="card-text">{{blg.content|truncatewords:15}}</p>
-                     <a href="{% url 'viewpage' blg.id %}" class="btn btn-primary">Read More</a>
                    </div>
                 </div>
              </div>
